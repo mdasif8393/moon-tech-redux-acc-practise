@@ -1,9 +1,12 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+
+  const state = useSelector((state) => state)
 
   useEffect(()=>{
     fetch("products.json")
